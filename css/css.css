@@ -1,0 +1,50 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scrollbar-width: none;
+}
+
+/* SHARED */
+
+/* BODY */
+
+/* HEADER */
+
+#my-main {
+    background-image: url(../img/cork.png);
+    width: 100%;
+    height: calc(100vh - 96px);
+}
+
+/* MAIN */
+
+#card-container {
+    max-width: 70%;
+    padding-top: 30%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+/* FOOTER */
+
+/* COLORS */
+
+#my-body {
+    background-image: url(../img/wall.png);
+}
+
+#my-main {
+    background-image: url(../img/cork.png);
+}
+
+/* COLORS/DECORATIONS - HOVER */
+
+/* MEDIA - TABLET */
+
+/* MEDIA - COMPUTER */
+
+/* MEDIA - INFINITE */
