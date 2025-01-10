@@ -13,20 +13,34 @@
 
 /* HEADER */
 
-#my-main {
-    background-image: url(../img/cork.png);
-    width: 100%;
-    height: calc(100vh - 96px);
+header {
+    background-image: url(../img/wall.png);
 }
 
 /* MAIN */
 
+#my-main {
+    width: 100%;
+}
+
 #card-container {
-    max-width: 70%;
-    padding-top: 30%;
+    width: 60%;
+    margin: auto;
+    padding-top: 30px;
     display: flex;
-    align-self: center;
-    justify-self: center;
+    flex-wrap: wrap;
+}
+
+.border-card {
+    background-color: white;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    max-height: 20%;
 }
 
 /* FOOTER */
@@ -34,17 +48,30 @@
 /* COLORS */
 
 #my-body {
-    background-image: url(../img/wall.png);
-}
-
-#my-main {
     background-image: url(../img/cork.png);
 }
 
+#my-main {
+ 
+}
+
+.card {
+    padding: 10px;
+}
 /* COLORS/DECORATIONS - HOVER */
 
 /* MEDIA - TABLET */
+@media (min-width: 768px) {
+    .card {
+        width: 50%;
+    }
+}
 
 /* MEDIA - COMPUTER */
+@media (min-width: 1024px) {
+    .card {
+        width: calc(100% / 3);
+    }
+}
 
 /* MEDIA - INFINITE */
