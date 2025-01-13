@@ -9,6 +9,10 @@
 
 /* SHARED */
 
+.display {
+    display: none;
+}
+
 /* BODY */
 
 /* HEADER */
@@ -31,6 +35,21 @@ header {
     flex-wrap: wrap;
 }
 
+.card {
+    padding: 10px;
+}
+
+.card:not(.dot, .dot > * ):hover {
+    transform: rotate(45deg);
+    -webkit-animation:spin 1s linear 1;
+    -moz-animation:spin 1s linear;
+    animation:spin 1s linear;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(45deg); } 
+}
+
 .border-card {
     background-color: white;
 }
@@ -43,6 +62,38 @@ p {
     max-height: 20%;
 }
 
+.hoverlayer {
+    position: sticky;
+    z-index: 10;
+}
+
+.my-blur img {
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 150px;
+    height: 150px;
+}
+
+.my-blur button {
+    display: flex;
+    justify-self: center;
+    margin-top: 75%;
+}
+
+.dot {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.dot img {
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+}
+
 /* FOOTER */
 
 /* COLORS */
@@ -51,15 +102,30 @@ p {
     background-image: url(../img/cork.png);
 }
 
-.card {
-    padding: 10px;
+.my-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
 /* COLORS/DECORATIONS - HOVER */
 
 /* MEDIA - TABLET */
 @media (min-width: 768px) {
     .card {
         width: 50%;
+    }
+    .my-blur img {
+        margin-top: 5%;
+        width: 30%;
+        height: 30%;
+    }
+    .my-blur button {
+        margin-top: 23%;
     }
 }
 
@@ -68,6 +134,25 @@ p {
     .card {
         width: calc(100% / 3);
     }
+    .my-blur img {
+        margin-top: 5%;
+        width: 40%;
+        height: 60%;
+    }
+    .my-blur button {
+        margin-top: 10%;
+    }
 }
 
 /* MEDIA - INFINITE */
+
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(45deg); } 
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(45deg); 
+        transform:rotate(45deg); 
+    } 
+}
